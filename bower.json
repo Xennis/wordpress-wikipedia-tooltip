@@ -1,0 +1,7 @@
+{
+  "name": "wp-wikipedia-tooltip",
+  "description": "",
+  "dependencies": {
+    "tooltipster": "~3.3.*"
+  }
+}
