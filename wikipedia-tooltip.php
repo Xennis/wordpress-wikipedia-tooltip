@@ -36,7 +36,7 @@ add_action('wp_enqueue_scripts', 'wt_enqueue_scripts');
 //   $links[] = '<a href="'.admin_url('admin.php?page=wt-settings').'">Settings</a>';
 //   return $links;
 //}
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'wt_plugin_action_links');
+//add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'wt_plugin_action_links');
 
 /*
  * Include scripts

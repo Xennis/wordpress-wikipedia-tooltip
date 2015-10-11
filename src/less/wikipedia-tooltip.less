@@ -3,8 +3,16 @@
 @import '@{bower}/tooltipster/css/tooltipster.css';
 @import '@{bower}/tooltipster/css/themes/tooltipster-punk.css';
 
-//@color-main-highlight: #1EAEDB;
-//
-//.tooltipster-punk {
-//	border-bottom-color: @color-main-highlight;
-//}
+@color-main-highlight: #1EAEDB;
+
+.tooltipster-punk {
+	border-bottom-color: @color-main-highlight;
+	
+	.tooltipster-content {
+
+		img {
+			padding-left: 10px;
+			padding-bottom: 5px;
+		}
+	}
+}
