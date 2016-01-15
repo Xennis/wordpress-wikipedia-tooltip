@@ -15,8 +15,14 @@ jQuery.fn.mediaWikiTooltip = function(options) {
 		 * @param {Object} page
 		 */
 		var handlePage = function(page) {
+			var content = '';
+			if (page.thumbnail) {
+				content += '<img src='+page.thumbnail.source+' style="float:right">';
+			}
+			content += '<h5>'+page.title+'</h5><p style="text-align: justify">'+page.extract+' (CC-BY-SA 3.0 - Wikipedia)</p>';
+			
 			self.tooltipster({
-				content: '<img src='+page.thumbnail.source+' style="float:right"><h5>'+page.title+'</h5><p style="text-align: justify">'+page.extract+' (CC-BY-SA 3.0 - Wikipedia)</p>',
+				content: content,
 				contentAsHTML: true,
 				theme: 'tooltipster-punk',
 				maxWidth: 450
@@ -48,7 +54,9 @@ jQuery.fn.mediaWikiTooltip = function(options) {
 					var page = data.query.pages;
 				} else {
 					console.warn('Empty data');
-					console.warn(data.warnings);
+					if (data.warnings) {
+						console.warn(data.warnings);						
+					}
 				}
 			},
 			error: function (errorMessage) {
